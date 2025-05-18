@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+# Python virtual environments
+venv/
+.env/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git-generated file lists
+tree.txt
+
+# Database files
+*.db
+*.sqlite
+chats.db
+
+# Data dumps (numpy, CSVs, JSONs)
+*.npy
+*.npz
+*.csv
+*.json
+
+# Model checkpoints
+*.pt
+*.pth
+
+# Optuna studies
+optuna_data/
+*_*optuna*.db
+*_*optuna*.csv
+
+# Experiment results
+RESULTS/
+*/RESULTS/
+output.md
+*.log
+
+# Plots, images, dashboards
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.html
+pheme_dashboard.html
+
+# Caches and temp files
+*.tmp
+*.bak
+
+
+.roomodes

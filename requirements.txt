@@ -1,0 +1,17 @@
+# Use nightly PyTorch wheels for CUDA 12.8 (Blackwell/50-series GPUs)
+--extra-index-url https://download.pytorch.org/whl/nightly/cu128
+--pre
+
+torch
+torchvision
+torchaudio
+
+# Transformers for BERT embedding pipeline
+transformers==4.51.3
+
+# Data handling and numeric libraries
+pandas>=2.2.3
+numpy>=2.2.4
+
+# Progress bar for embedding loops
+tqdm>=4.67.1
