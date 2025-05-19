@@ -35,8 +35,7 @@ optuna_data/
 *_*optuna*.csv
 
 # Experiment results
-RESULTS/
-*/RESULTS/
+
 output.md
 *.log
 
