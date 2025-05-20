@@ -44,6 +44,7 @@ output.md
 *.jpg
 *.jpeg
 *.html
+GNN/*.pdf
 pheme_dashboard.html
 
 # Caches and temp files
