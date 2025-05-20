@@ -1,0 +1,213 @@
+<svg viewBox="0 0 800 650" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="650" fill="#ffffff" rx="5" ry="5"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">Model Comparison Design</text>
+  
+  <!-- Shared Components (Top) -->
+  <g transform="translate(0, 60)">
+    <rect x="150" y="0" width="500" height="80" rx="10" ry="10" fill="#e9ecef" stroke="#dee2e6" stroke-width="2"/>
+    
+    <text x="400" y="28" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold">Common Input Layer</text>
+    
+    <!-- BERT Input -->
+    <rect x="190" y="40" width="180" height="30" rx="6" ry="6" fill="#cfe2ff" stroke="#9ec5fe" stroke-width="1.5"/>
+    <text x="280" y="60" font-family="Arial" font-size="14" text-anchor="middle">Tweet BERT Embeddings</text>
+    
+    <!-- Graph Structure -->
+    <rect x="430" y="40" width="180" height="30" rx="6" ry="6" fill="#cfe2ff" stroke="#9ec5fe" stroke-width="1.5"/>
+    <text x="520" y="60" font-family="Arial" font-size="14" text-anchor="middle">Reply Graph Structure</text>
+  </g>
+  
+  <!-- MLP Baseline (No Graph) - EXTENDED HEIGHT -->
+  <g transform="translate(40, 170)">
+    <rect x="0" y="0" width="120" height="365" rx="10" ry="10" fill="#f8d7da" stroke="#f5c2c7" stroke-width="2"/>
+    
+    <text x="60" y="30" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">MLP Baseline</text>
+    <text x="60" y="50" font-family="Arial" font-size="12" text-anchor="middle" font-style="italic">(No Graph)</text>
+    
+    <!-- Input -->
+    <rect x="15" y="70" width="90" height="35" rx="5" ry="5" fill="#e2e3e5" stroke="#d3d6d8" stroke-width="1"/>
+    <text x="60" y="92" font-family="Arial" font-size="11" text-anchor="middle">Node Features</text>
+    
+    <!-- MLP Layers -->
+    <rect x="15" y="120" width="90" height="35" rx="5" ry="5" fill="#ffc107" stroke="#e0a800" stroke-width="1"/>
+    <text x="60" y="142" font-family="Arial" font-size="11" text-anchor="middle">Linear Layer</text>
+    
+    <rect x="15" y="165" width="90" height="35" rx="5" ry="5" fill="#ffc107" stroke="#e0a800" stroke-width="1"/>
+    <text x="60" y="187" font-family="Arial" font-size="11" text-anchor="middle">ReLU + Dropout</text>
+    
+    <rect x="15" y="210" width="90" height="35" rx="5" ry="5" fill="#ffc107" stroke="#e0a800" stroke-width="1"/>
+    <text x="60" y="232" font-family="Arial" font-size="11" text-anchor="middle">Linear Layer</text>
+    
+    <rect x="15" y="255" width="90" height="35" rx="5" ry="5" fill="#ffc107" stroke="#e0a800" stroke-width="1"/>
+    <text x="60" y="277" font-family="Arial" font-size="11" text-anchor="middle">ReLU + Dropout</text>
+    
+    <!-- Output -->
+    <rect x="15" y="300" width="90" height="35" rx="5" ry="5" fill="#28a745" stroke="#218838" stroke-width="1"/>
+    <text x="60" y="322" font-family="Arial" font-size="11" text-anchor="middle" fill="white">Binary Output</text>
+    
+    <!-- Key Feature - ALIGNED -->
+    <rect x="15" y="345" width="90" height="35" rx="5" ry="5" fill="#17a2b8" stroke="#138496" stroke-width="1.5"/>
+    <text x="60" y="367" font-family="Arial" font-size="10" text-anchor="middle" fill="white">Content Only</text>
+  </g>
+  
+  <!-- Static GNN Models - EXTENDED HEIGHT -->
+  <g transform="translate(170, 170)">
+    <rect x="0" y="0" width="280" height="365" rx="10" ry="10" fill="#d1e7dd" stroke="#badbcc" stroke-width="2"/>
+    
+    <text x="140" y="30" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Static GNN Models</text>
+    <text x="140" y="50" font-family="Arial" font-size="12" text-anchor="middle" font-style="italic">(GCN, GAT, GATv2)</text>
+    
+    <!-- Input -->
+    <rect x="15" y="70" width="250" height="35" rx="5" ry="5" fill="#e2e3e5" stroke="#d3d6d8" stroke-width="1"/>
+    <text x="140" y="92" font-family="Arial" font-size="12" text-anchor="middle">Node Features + Static Graph Structure</text>
+    
+    <!-- GCN Layer -->
+    <g transform="translate(15, 120)">
+      <rect x="0" y="0" width="70" height="70" rx="5" ry="5" fill="#ffc107" stroke="#e0a800" stroke-width="1"/>
+      <text x="35" y="25" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">GCN</text>
+      <line x1="10" y1="35" x2="60" y2="35" stroke="#e0a800" stroke-width="1"/>
+      <text x="35" y="55" font-family="Arial" font-size="10" text-anchor="middle">Spectral Graph</text>
+      <text x="35" y="65" font-family="Arial" font-size="10" text-anchor="middle">Convolution</text>
+    </g>
+    
+    <!-- GAT Layer -->
+    <g transform="translate(95, 120)">
+      <rect x="0" y="0" width="70" height="70" rx="5" ry="5" fill="#ffc107" stroke="#e0a800" stroke-width="1"/>
+      <text x="35" y="25" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">GAT</text>
+      <line x1="10" y1="35" x2="60" y2="35" stroke="#e0a800" stroke-width="1"/>
+      <text x="35" y="55" font-family="Arial" font-size="10" text-anchor="middle">Multi-Head</text>
+      <text x="35" y="65" font-family="Arial" font-size="10" text-anchor="middle">Attention</text>
+    </g>
+    
+    <!-- GATv2 Layer -->
+    <g transform="translate(175, 120)">
+      <rect x="0" y="0" width="70" height="70" rx="5" ry="5" fill="#ffc107" stroke="#e0a800" stroke-width="1"/>
+      <text x="35" y="25" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">GATv2</text>
+      <line x1="10" y1="35" x2="60" y2="35" stroke="#e0a800" stroke-width="1"/>
+      <text x="35" y="55" font-family="Arial" font-size="10" text-anchor="middle">Dynamic</text>
+      <text x="35" y="65" font-family="Arial" font-size="10" text-anchor="middle">Attention</text>
+    </g>
+    
+    <!-- Common Processing -->
+    <rect x="15" y="205" width="250" height="35" rx="5" ry="5" fill="#ffc107" stroke="#e0a800" stroke-width="1"/>
+    <text x="140" y="227" font-family="Arial" font-size="12" text-anchor="middle">Node Hidden Representation</text>
+    
+    <rect x="15" y="250" width="250" height="35" rx="5" ry="5" fill="#ffc107" stroke="#e0a800" stroke-width="1"/>
+    <text x="140" y="272" font-family="Arial" font-size="12" text-anchor="middle">Dropout + Normalization</text>
+    
+    <!-- Output -->
+    <rect x="15" y="300" width="250" height="35" rx="5" ry="5" fill="#28a745" stroke="#218838" stroke-width="1"/>
+    <text x="140" y="322" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Node Classification (Rumour/Non-Rumour)</text>
+    
+    <!-- Key Feature - ALIGNED -->
+    <rect x="15" y="345" width="250" height="35" rx="5" ry="5" fill="#17a2b8" stroke="#138496" stroke-width="1.5"/>
+    <text x="140" y="367" font-family="Arial" font-size="10" text-anchor="middle" fill="white">Models Graph Structure (No Temporal Info)</text>
+  </g>
+  
+  <!-- Temporal GNN Models - EXTENDED HEIGHT -->
+  <g transform="translate(460, 170)">
+    <rect x="0" y="0" width="300" height="365" rx="10" ry="10" fill="#cfe2ff" stroke="#9ec5fe" stroke-width="2"/>
+    
+    <text x="150" y="30" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Temporal GNN Models</text>
+    <text x="150" y="50" font-family="Arial" font-size="12" text-anchor="middle" font-style="italic">(DySAT, Simplified DySAT, TGN)</text>
+    
+    <!-- Inputs -->
+    <rect x="15" y="70" width="270" height="30" rx="5" ry="5" fill="#e2e3e5" stroke="#d3d6d8" stroke-width="1"/>
+    <text x="150" y="90" font-family="Arial" font-size="12" text-anchor="middle">Node Features + Dynamic Graph Structure</text>
+    
+    <!-- DySAT - REDUCED HEIGHT -->
+    <g transform="translate(15, 110)">
+      <rect x="0" y="0" width="120" height="80" rx="5" ry="5" fill="#fd7e14" stroke="#c56508" stroke-width="1.5"/>
+      <text x="60" y="20" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">DySAT</text>
+      
+      <rect x="10" y="30" width="100" height="18" rx="3" ry="3" fill="white" fill-opacity="0.8"/>
+      <text x="60" y="44" font-family="Arial" font-size="11" text-anchor="middle">Structural Attention</text>
+      
+      <rect x="10" y="53" width="100" height="18" rx="3" ry="3" fill="white" fill-opacity="0.8"/>
+      <text x="60" y="67" font-family="Arial" font-size="11" text-anchor="middle">Temporal Attention</text>
+    </g>
+    
+    <!-- Simplified DySAT - REDUCED HEIGHT -->
+    <g transform="translate(145, 110)">
+      <rect x="0" y="0" width="140" height="80" rx="5" ry="5" fill="#fd7e14" stroke="#c56508" stroke-width="1.5"/>
+      <text x="70" y="20" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">SimpleDySAT</text>
+      
+      <rect x="10" y="30" width="120" height="18" rx="3" ry="3" fill="white" fill-opacity="0.8"/>
+      <text x="70" y="44" font-family="Arial" font-size="11" text-anchor="middle">Structural Attention</text>
+      
+      <rect x="10" y="53" width="120" height="18" rx="3" ry="3" fill="white" fill-opacity="0.7" stroke="#c56508" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="70" y="67" font-family="Arial" font-size="11" text-anchor="middle" fill="#6c757d">No Temporal Attention</text>
+    </g>
+    
+    <!-- TGN - REDUCED HEIGHT AND MOVED UP -->
+    <g transform="translate(15, 200)">
+      <rect x="0" y="0" width="270" height="80" rx="5" ry="5" fill="#6610f2" stroke="#4d0db8" stroke-width="1.5"/>
+      <text x="135" y="20" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold" fill="white">TGN (Temporal Graph Network)</text>
+      
+      <g transform="translate(15, 25)">
+        <rect x="0" y="0" width="70" height="45" rx="3" ry="3" fill="white" fill-opacity="0.9"/>
+        <text x="35" y="18" font-family="Arial" font-size="11" text-anchor="middle" font-weight="bold">Message</text>
+        <text x="35" y="33" font-family="Arial" font-size="11" text-anchor="middle">Function</text>
+        <path d="M35,38 L35,45" stroke="#4d0db8" stroke-width="1.5" marker-end="url(#msg)"/>
+        <defs>
+          <marker id="msg" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+            <polygon points="0 0, 6 2, 0 4" fill="#4d0db8"/>
+          </marker>
+        </defs>
+      </g>
+      
+      <g transform="translate(100, 25)">
+        <rect x="0" y="0" width="70" height="45" rx="3" ry="3" fill="white" fill-opacity="0.9"/>
+        <text x="35" y="18" font-family="Arial" font-size="11" text-anchor="middle" font-weight="bold">Memory</text>
+        <text x="35" y="33" font-family="Arial" font-size="11" text-anchor="middle">Update (GRU)</text>
+        <path d="M35,38 L35,45" stroke="#4d0db8" stroke-width="1.5" marker-end="url(#mem)"/>
+        <defs>
+          <marker id="mem" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+            <polygon points="0 0, 6 2, 0 4" fill="#4d0db8"/>
+          </marker>
+        </defs>
+      </g>
+      
+      <g transform="translate(185, 25)">
+        <rect x="0" y="0" width="70" height="45" rx="3" ry="3" fill="white" fill-opacity="0.9"/>
+        <text x="35" y="18" font-family="Arial" font-size="11" text-anchor="middle" font-weight="bold">Embedding</text>
+        <text x="35" y="33" font-family="Arial" font-size="11" text-anchor="middle">Function</text>
+        <path d="M35,38 L35,45" stroke="#4d0db8" stroke-width="1.5" marker-end="url(#emb)"/>
+        <defs>
+          <marker id="emb" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+            <polygon points="0 0, 6 2, 0 4" fill="#4d0db8"/>
+          </marker>
+        </defs>
+      </g>
+    </g>
+    
+    <!-- Common Output - ADJUSTED -->
+    <rect x="15" y="300" width="270" height="35" rx="5" ry="5" fill="#28a745" stroke="#218838" stroke-width="1.5"/>
+    <text x="150" y="322" font-family="Arial" font-size="11" text-anchor="middle" fill="white">Temporal Node Embeddings → Classification</text>
+    
+    <!-- Key Feature - ALIGNED -->
+    <rect x="15" y="345" width="270" height="35" rx="5" ry="5" fill="#17a2b8" stroke="#138496" stroke-width="1.5"/>
+    <text x="150" y="367" font-family="Arial" font-size="10" text-anchor="middle" fill="white">Explicitly Models Temporal Evolution of Rumours</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(50, 570)">
+    <rect x="0" y="0" width="700" height="65" rx="10" ry="10" fill="#f1f3f5" stroke="#dee2e6" stroke-width="1.5"/>
+    
+    <circle cx="50" cy="22" r="10" fill="#f8d7da"/>
+    <text x="70" y="26" font-family="Arial" font-size="12" text-anchor="start">Baseline (No Graph)</text>
+    
+    <circle cx="280" cy="22" r="10" fill="#d1e7dd"/>
+    <text x="300" y="26" font-family="Arial" font-size="12" text-anchor="start">Static Graph Models</text>
+    
+    <circle cx="530" cy="22" r="10" fill="#cfe2ff"/>
+    <text x="550" y="26" font-family="Arial" font-size="12" text-anchor="start">Temporal Graph Models</text>
+    
+    <text x="350" y="50" font-family="Arial" font-size="11" text-anchor="middle" font-style="italic">
+      All models use BERT embeddings as node features. Differences lie in how they process graph structure and time.
+    </text>
+  </g>
+</svg>
