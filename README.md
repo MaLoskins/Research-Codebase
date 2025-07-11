@@ -203,6 +203,9 @@ The table below maps key sections of the thesis to their corresponding implement
 
 ---
 
+## EDA T-SNE Embeddings Analysis:
+https://dashboard-for-presentation.matthew-haskins-mh.workers.dev/
+
 ## Citation
 
 If you use this codebase or refer to the findings in your own research, please cite the thesis:
